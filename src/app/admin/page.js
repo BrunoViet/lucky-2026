@@ -1,9 +1,9 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import PlayerPageClient from "@/components/player-page-client";
+import AdminPageClient from "@/components/admin-page-client";
 
-export default function HomePage() {
+export default function AdminPage() {
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -14,11 +14,11 @@ export default function HomePage() {
     return (
       <main className="min-h-screen bg-slate-100 p-6 text-slate-900">
         <div className="mx-auto max-w-md rounded-2xl bg-white p-8 shadow-xl">
-          Đang tải...
+          Đang tải trang quản trị...
         </div>
       </main>
     );
   }
 
-  return <PlayerPageClient />;
+  return <AdminPageClient />;
 }
